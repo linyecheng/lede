@@ -73,9 +73,6 @@ jobs:
           # 例如:
 
           cat >> .config <<EOF
-          CONFIG_TARGET_IMAGES_GZIP=y
-          CONFIG_KERNEL_BUILD_USER="OpenWrt-CI"
-          CONFIG_KERNEL_BUILD_DOMAIN="Azure"
           CONFIG_MODULES=y
           CONFIG_HAVE_DOT_CONFIG=y
           CONFIG_TARGET_ramips=y
@@ -119,7 +116,7 @@ jobs:
           CONFIG_DEFAULT_libustream-openssl=y
           CONFIG_DEFAULT_logd=y
           CONFIG_DEFAULT_luci=y
-          CONFIG_DEFAULT_luci-app-access          CONtrol=y
+          CONFIG_DEFAULT_luci-app-accesscontrol=y
           CONFIG_DEFAULT_luci-app-arpbind=y
           CONFIG_DEFAULT_luci-app-autoreboot=y
           CONFIG_DEFAULT_luci-app-ddns=y
@@ -140,7 +137,7 @@ jobs:
           CONFIG_DEFAULT_ppp=y
           CONFIG_DEFAULT_ppp-mod-pppoe=y
           CONFIG_DEFAULT_procd=y
-          CONFIG_DEFAULT_sw          CONfig=y
+          CONFIG_DEFAULT_swconfig=y
           CONFIG_DEFAULT_uci=y
           CONFIG_DEFAULT_uclient-fetch=y
           CONFIG_DEFAULT_urandom-seed=y
@@ -247,8 +244,8 @@ jobs:
           CONFIG_TARGET_OPTIMIZATION="-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc"
           CONFIG_SOFT_FLOAT=y
           CONFIG_USE_MIPS16=y
-          CONFIG_EXTRA_BINUTILS_          CONFIG_OPTIONS=""
-          CONFIG_EXTRA_GCC_          CONFIG_OPTIONS=""
+          CONFIG_EXTRA_BINUTILS_CONFIG_OPTIONS=""
+          CONFIG_EXTRA_GCC_CONFIG_OPTIONS=""
           CONFIG_GDB=y
           CONFIG_USE_MUSL=y
           CONFIG_SSP_SUPPORT=y
@@ -275,7 +272,7 @@ jobs:
           CONFIG_PACKAGE_base-files=y
           CONFIG_PACKAGE_block-mount=y
           CONFIG_PACKAGE_busybox=y
-          CONFIG_BUSYBOX_DEFAULT_HAVE_DOT_          CONFIG=y
+          CONFIG_BUSYBOX_DEFAULT_HAVE_DOT_CONFIG=y
           CONFIG_BUSYBOX_DEFAULT_INCLUDE_SUSv2=y
           CONFIG_BUSYBOX_DEFAULT_LONG_OPTS=y
           CONFIG_BUSYBOX_DEFAULT_SHOW_USAGE=y
@@ -447,9 +444,9 @@ jobs:
           CONFIG_BUSYBOX_DEFAULT_GREP=y
           CONFIG_BUSYBOX_DEFAULT_EGREP=y
           CONFIG_BUSYBOX_DEFAULT_FGREP=y
-          CONFIG_BUSYBOX_DEFAULT_FEATURE_GREP_          CONTEXT=y
+          CONFIG_BUSYBOX_DEFAULT_FEATURE_GREP_CONTEXT=y
           CONFIG_BUSYBOX_DEFAULT_XARGS=y
-          CONFIG_BUSYBOX_DEFAULT_FEATURE_XARGS_SUPPORT_          CONFIRMATION=y
+          CONFIG_BUSYBOX_DEFAULT_FEATURE_XARGS_SUPPORT_CONFIRMATION=y
           CONFIG_BUSYBOX_DEFAULT_FEATURE_XARGS_SUPPORT_QUOTES=y
           CONFIG_BUSYBOX_DEFAULT_FEATURE_XARGS_SUPPORT_TERMOPT=y
           CONFIG_BUSYBOX_DEFAULT_FEATURE_XARGS_SUPPORT_ZERO_TERM=y
@@ -506,10 +503,10 @@ jobs:
           CONFIG_BUSYBOX_DEFAULT_FEATURE_BRCTL_FANCY=y
           CONFIG_BUSYBOX_DEFAULT_FEATURE_BRCTL_SHOW=y
           CONFIG_BUSYBOX_DEFAULT_FEATURE_HTTPD_PORT_DEFAULT=80
-          CONFIG_BUSYBOX_DEFAULT_IF          CONFIG=y
-          CONFIG_BUSYBOX_DEFAULT_FEATURE_IF          CONFIG_STATUS=y
-          CONFIG_BUSYBOX_DEFAULT_FEATURE_IF          CONFIG_HW=y
-          CONFIG_BUSYBOX_DEFAULT_FEATURE_IF          CONFIG_BROADCAST_PLUS=y
+          CONFIG_BUSYBOX_DEFAULT_IFCONFIG=y
+          CONFIG_BUSYBOX_DEFAULT_FEATURE_IFCONFIG_STATUS=y
+          CONFIG_BUSYBOX_DEFAULT_FEATURE_IFCONFIG_HW=y
+          CONFIG_BUSYBOX_DEFAULT_FEATURE_IFCONFIG_BROADCAST_PLUS=y
           CONFIG_BUSYBOX_DEFAULT_IFUPDOWN_IFSTATE_PATH=""
           CONFIG_BUSYBOX_DEFAULT_IP=y
           CONFIG_BUSYBOX_DEFAULT_FEATURE_IP_ADDRESS=y
@@ -564,7 +561,7 @@ jobs:
           CONFIG_BUSYBOX_DEFAULT_ASH=y
           CONFIG_BUSYBOX_DEFAULT_ASH_INTERNAL_GLOB=y
           CONFIG_BUSYBOX_DEFAULT_ASH_BASH_COMPAT=y
-          CONFIG_BUSYBOX_DEFAULT_ASH_JOB_          CONTROL=y
+          CONFIG_BUSYBOX_DEFAULT_ASH_JOB_CONTROL=y
           CONFIG_BUSYBOX_DEFAULT_ASH_ALIAS=y
           CONFIG_BUSYBOX_DEFAULT_ASH_EXPAND_PRMT=y
           CONFIG_BUSYBOX_DEFAULT_ASH_ECHO=y
@@ -606,7 +603,7 @@ jobs:
           CONFIG_PACKAGE_opkg=y
           CONFIG_PACKAGE_procd=y
           CONFIG_PACKAGE_rpcd=y
-          CONFIG_PACKAGE_sw          CONfig=y
+          CONFIG_PACKAGE_swconfig=y
           CONFIG_PACKAGE_ubox=y
           CONFIG_PACKAGE_ubus=y
           CONFIG_PACKAGE_ubusd=y
@@ -644,19 +641,19 @@ jobs:
           CONFIG_PACKAGE_kmod-lib-lzo=y
           CONFIG_PACKAGE_kmod-lib-textsearch=y
           CONFIG_PACKAGE_kmod-ip6tables=y
-          CONFIG_PACKAGE_kmod-ipt-          CONntrack=y
+          CONFIG_PACKAGE_kmod-ipt-conntrack=y
           CONFIG_PACKAGE_kmod-ipt-core=y
           CONFIG_PACKAGE_kmod-ipt-extra=y
-          CONFIG_PACKAGE_kmod-ipt-full          CONenat=y
+          CONFIG_PACKAGE_kmod-ipt-fullconenat=y
           CONFIG_PACKAGE_kmod-ipt-ipset=y
           CONFIG_PACKAGE_kmod-ipt-nat=y
           CONFIG_PACKAGE_kmod-ipt-nat6=y
           CONFIG_PACKAGE_kmod-ipt-offload=y
           CONFIG_PACKAGE_kmod-ipt-raw=y
           CONFIG_PACKAGE_kmod-ipt-tproxy=y
-          CONFIG_PACKAGE_kmod-nf-          CONntrack=y
-          CONFIG_PACKAGE_kmod-nf-          CONntrack-netlink=y
-          CONFIG_PACKAGE_kmod-nf-          CONntrack6=y
+          CONFIG_PACKAGE_kmod-nf-conntrack=y
+          CONFIG_PACKAGE_kmod-nf-conntrack-netlink=y
+          CONFIG_PACKAGE_kmod-nf-conntrack6=y
           CONFIG_PACKAGE_kmod-nf-flow=y
           CONFIG_PACKAGE_kmod-nf-ipt=y
           CONFIG_PACKAGE_kmod-nf-ipt6=y
@@ -718,7 +715,7 @@ jobs:
           CONFIG_OPENSSL_ENGINE_BUILTIN=y
           CONFIG_OPENSSL_ENGINE_BUILTIN_AFALG=y
           CONFIG_OPENSSL_ENGINE_BUILTIN_DEVCRYPTO=y
-          CONFIG_PACKAGE_libopenssl-          CONf=y
+          CONFIG_PACKAGE_libopenssl-conf=y
           CONFIG_PACKAGE_libblobmsg-json=y
           CONFIG_PACKAGE_libcbor=y
           CONFIG_PACKAGE_libeudev=y
@@ -746,7 +743,7 @@ jobs:
           CONFIG_LUCI_LANG_zh-cn=y
           CONFIG_PACKAGE_luci-mod-admin-full=y
           CONFIG_PACKAGE_luci-newapi=y
-          CONFIG_PACKAGE_luci-app-access          CONtrol=y
+          CONFIG_PACKAGE_luci-app-accesscontrol=y
           CONFIG_PACKAGE_luci-app-arpbind=y
           CONFIG_PACKAGE_luci-app-autoreboot=y
           CONFIG_PACKAGE_luci-app-ddns=y
@@ -776,7 +773,7 @@ jobs:
           CONFIG_PACKAGE_luci-lib-nixio=y
           CONFIG_PACKAGE_luci-lib-nixio_openssl=y
           CONFIG_PACKAGE_default-settings=y
-          CONFIG_PACKAGE_luci-i18n-access          CONtrol-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-accesscontrol-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-arpbind-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
@@ -803,7 +800,7 @@ jobs:
           CONFIG_PACKAGE_ip6tables=y
           CONFIG_PACKAGE_iptables=y
           CONFIG_PACKAGE_iptables-mod-extra=y
-          CONFIG_PACKAGE_iptables-mod-full          CONenat=y
+          CONFIG_PACKAGE_iptables-mod-fullconenat=y
           CONFIG_PACKAGE_iptables-mod-tproxy=y
           CONFIG_PACKAGE_miniupnpd=y
           CONFIG_PACKAGE_ddns-scripts=y
