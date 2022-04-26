@@ -164,8 +164,8 @@ jobs:
           CONFIG_SIGNED_PACKAGES=y
           CONFIG_SIGNATURE_CHECK=y
           CONFIG_SHADOW_PASSWORDS=y
-          CONFIG_KERNEL_BUILD_USER=""
-          CONFIG_KERNEL_BUILD_DOMAIN=""
+          CONFIG_KERNEL_BUILD_USER="linyecheng"
+          CONFIG_KERNEL_BUILD_DOMAIN="gmail.com"
           CONFIG_KERNEL_PRINTK=y
           CONFIG_KERNEL_CRASHLOG=y
           CONFIG_KERNEL_SWAP=y
@@ -717,9 +717,6 @@ jobs:
           CONFIG_OPENSSL_ENGINE_BUILTIN_DEVCRYPTO=y
           CONFIG_PACKAGE_libopenssl-conf=y
           CONFIG_PACKAGE_libblobmsg-json=y
-          CONFIG_PACKAGE_libcbor=y
-          CONFIG_PACKAGE_libeudev=y
-          CONFIG_PACKAGE_libfido2=y
           CONFIG_PACKAGE_libiwinfo=y
           CONFIG_PACKAGE_libjson-c=y
           CONFIG_PACKAGE_liblua=y
@@ -765,7 +762,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-wol=y
           CONFIG_PACKAGE_luci-app-zerotier=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
-          CONFIG_PACKAGE_luci-theme-material=y
           CONFIG_PACKAGE_luci-proto-ipv6=y
           CONFIG_PACKAGE_luci-proto-ppp=y
           CONFIG_PACKAGE_luci-lib-ip=y
@@ -808,10 +804,6 @@ jobs:
           CONFIG_PACKAGE_ddns-scripts_dnspod=y
           CONFIG_PACKAGE_pdnsd-alt=y
           CONFIG_PACKAGE_ip-tiny=y
-          CONFIG_PACKAGE_openssh-keygen=y
-          CONFIG_PACKAGE_openssh-server=y
-          CONFIG_OPENSSH_LIBFIDO2=y
-          CONFIG_PACKAGE_openssh-sftp-server=y
           CONFIG_PACKAGE_zerotier=y
           CONFIG_PACKAGE_uhttpd=y
           CONFIG_PACKAGE_uhttpd-mod-ubus=y
